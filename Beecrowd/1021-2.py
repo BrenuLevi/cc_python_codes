@@ -1,7 +1,14 @@
 value = float(input())  #input do valor inicial em reais
 
+#representação de todos os valores possíveis em dinheiro
 values = [100, 50, 20, 10, 5, 2, 1, 0.5, 0.25, 0.10, 0.05, 0.01]
+#representação da quantidade de cada notas / moeda (na ordem em que aparecem na lista anterior)
 num_notes =[ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+
+# Neste for, para cada valor possível de nota/moeda (presentes na lista values) ocorre uma repetição em que o programa calcula 
+# quantas notas/moedas daquele valor é possível se obter a partir do valor restante em dinheiro (variavel value). Após a obtenção do número de notas possível, 
+# estas são adicionadas na posição correspondente ao seu valor na lista num_notes e o seu valor somado é removido do valor restante em dinheiro para que as 
+#proximas notas/moedas possam ser testadas. 
 
 for index, nota in enumerate(values):
     if nota <= value: 
