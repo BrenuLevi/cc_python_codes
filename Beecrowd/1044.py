@@ -1,7 +1,6 @@
-x = input().split()
-a, b  = map(int, x)
+A,B=map(int,input().split())
 
-if a%b == 0 or b%a == 0:
+if A%B==0 or B%A==0:
     print("Sao Multiplos")
-else:
+else :
     print("Nao sao Multiplos")

@@ -1,48 +1,9 @@
-'''resolução aceita pelo BeeCrowd'''
+A=input().split()
+B=[]
 
-x = input().split()
-a, b, c = x
-a = int(a)
-b = int(b)
-c = int(c)
+for index, value in enumerate(A) :
+    A[index] = int(A[index])
+    B.append(A[index])
 
-
-if a > b and a > c:
-    d = a
-    if b > c:
-        e = b
-        f = c
-    else:
-        e = c
-        f = b
-if b > a and b > c:
-    d = b
-    if a > c:
-        e = a
-        f = c
-    else:
-        e = c
-        f = a
-if c > a and c > b:
-    d = c
-    if a > b:
-        e = a
-        f = b
-    else:
-        f = a
-        e = b
-print(f)
-print(e)
-print(d)
-print()
-print(a)
-print(b)
-print(c)
-
-'''resolução alternativa
-i = input().split()
-x , y, z = i
-values = [x, y, z]
-values.sort()
-print(f"{x}\n{y}\n{z}\n\n{values[0]}\n{values[1]}\n{values[2]}")
-'''
+A.sort()
+print(f"{A[0]}\n{A[1]}\n{A[2]}\n\n{B[0]}\n{B[1]}\n{B[2]}")

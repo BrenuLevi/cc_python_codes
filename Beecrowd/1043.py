@@ -1,9 +1,6 @@
-x = input().split()
-a, b, c = map(float, x)
+A,B,C=map(float,input().split())
 
-if a > abs(b-c) and a < b+c : # verifica se o triangulo é possivel
-    peri = a+b+c
-    print(f"Perimetro = {peri}")
-else:
-    area = ((a + b)*c)/2
-    print(f"Area = {area}")
+if A+B>C and B+C>A and C+A>B :
+    print(f"Perimetro = {A+B+C:.1f}")
+else :
+    print(f"Area = {((A+B)*C)/2}")
